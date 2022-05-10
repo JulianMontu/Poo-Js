@@ -1,29 +1,10 @@
-export class CuentaAhorro {
-  #cliente;
-  #saldo;
+import { Cuenta } from "./Cuenta.js";
 
-  constructor(cliente, saldo, numero, agencia) {
-    this.numero = numero;
-    this.agencia = agencia;
-    this.#cliente = cliente;
-    this.#saldo = saldo;
-  }
-  depositoEnCuenta(valor) {
-    this.#saldo += valor;
-    return this.saldo;
+export class CuentaAhorro extends Cuenta {
+  constructor(cliente,  agencia, numeroCuenta,saldo) {
+    super(cliente,  agencia,numeroCuenta, saldo);
   }
   retirarDeCuenta(valor) {
-    if (!(valor > this.#saldo)) {
-      return (this.#saldo -= valor);
-    } else {
-      return this.#saldo;
-    }
-  }
-  valorSaldo() {
-    return this.#saldo;
-  }
-  transferirCuenta(valor, cuentaDestino) {
-    this.retirarDeCuenta(valor);
-    cuentaDestino.depositoEnCuenta(valor);
+    super._retirarDeCuenta(valor,2);
   }
 }
