@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente.js";
-import { CuentaAhorro } from "./CuentaAhorro.js";
-import { CuentaCorriente } from "./CuentaCorriente.js";
-import { CuentaNomina } from "./CuentaNomina.js";
+import { CuentaAhorro } from "./Cuentas/CuentaAhorro.js";
+import { CuentaCorriente } from "./Cuentas/CuentaCorriente.js";
+import { CuentaNomina } from "./Cuentas/CuentaNomina.js";
 
 /**
  * Clientes
