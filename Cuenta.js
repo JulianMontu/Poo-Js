@@ -23,7 +23,8 @@ export class Cuenta {
   }
   //Acceso a metodos privados
   retirarDeCuenta(valor) {
-    _retirarDeCuenta(valor, 0);
+    //Metodo Abstracto
+    throw new Error('Debe implementar el metodo retirarDecuenta en su clase')
   }
   //Metodo privado
   _retirarDeCuenta(valor, comision) {
